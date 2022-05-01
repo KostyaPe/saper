@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Modification</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: grey;
+      overflow: hidden;
+    }
+
+    table * {
+      border-collapse: collapse;
+    }
+
+    td {
+      width: 60px;
+      height: 60px;
+      border: 1px solid black;
+      background: center / cover no-repeat url(app/ico.png);
+      transition: transform 0.2s;
+    }
+
+    td:hover {
+      background: center / cover no-repeat url(app/cracks.png), center / cover no-repeat url(app/ico.png);
+      transform: scale(0.9);
+    }
+
+    td.checked {
+      background: none;
+    }
+
+    td.mine {
+      background: center / cover no-repeat url(app/mine.png);
+    }
+
+  </style>
+</head>
+<body>
+  <h2 class="bombs"></h2>
+  <script src="app/app.js"></script>
+</body>
+
+</html>
